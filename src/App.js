@@ -3,12 +3,18 @@ import UserIcon from '@material-ui/icons/Group';
 import jsonServerProvider from 'ra-data-json-server';
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
+import authProvider from './authProvider';
+import Dashboard from './Dashboard';
 import { PostCreate, PostEdit, PostList } from './posts';
 import { UserList } from './users';
 
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 const App = () => (
-  <Admin dataProvider={dataProvider}>
+  <Admin
+    dashboard={Dashboard}
+    authProvider={authProvider}
+    dataProvider={dataProvider}
+  >
     <Resource
       name="posts"
       list={PostList}
