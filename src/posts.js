@@ -2,13 +2,17 @@ import { useMediaQuery } from '@material-ui/core';
 import * as React from 'react';
 import {
   Create,
+  Datagrid,
   Edit,
+  EditButton,
   Filter,
   List,
+  ReferenceField,
   ReferenceInput,
   SelectInput,
   SimpleForm,
   SimpleList,
+  TextField,
   TextInput,
 } from 'react-admin';
 
